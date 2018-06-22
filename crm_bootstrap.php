@@ -12,7 +12,7 @@ $salesman3 = new Salesman(3, "Anna AAA");
 
 $company = new Company(1, "Firma AAAA");
 $company2 = new Company(2, "Firma 2");
-$company3 = new Company(3, "Firma 123");
+$company3 = new Company(3, "Firma 3");
 
 
 $activities = array (
