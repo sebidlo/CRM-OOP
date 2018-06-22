@@ -23,7 +23,7 @@ new Activity(3, "Nawiązanie kontaktu", new DateTime("2018-03-01 14:00"), $compa
 
 //echo $activity->getInfo();
 
-echo '<table border=2><tr><td>Data</td><td>Temat</td><td>Nazwa Firmy</td><td>Typ</td><td>Status</td><td>Sprzedawca</td></tr>';
+echo '<table border=15><tr><td>Data</td><td>Temat</td><td>Nazwa Firmy</td><td>Typ</td><td>Status</td><td>Sprzedawca</td></tr>';
 foreach ($activities as $activity) {
 echo "<p>{$activity->asHtmlTableRow()}</p>";  
 
