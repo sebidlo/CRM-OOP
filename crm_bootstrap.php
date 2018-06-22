@@ -8,7 +8,7 @@ include_once 'model/Company.php';
 
 $salesman = new Salesman(1, "Jan Kowalski");
 $salesman2 = new Salesman(2, "Jakis facet");
-$salesman3 = new Salesman(3, "Jakaś kobieta");
+$salesman3 = new Salesman(3, "Anna AAA");
 
 $company = new Company(1, "Firma AAAA");
 $company2 = new Company(2, "Firma 2");
