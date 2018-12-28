@@ -5,6 +5,7 @@
 include_once 'model/Activity.php';
 include_once 'model/Salesman.php';
 include_once 'model/Company.php';
+include_once 'logic/ActivityGenerator.php';
 
 $salesman = new Salesman(1, "Jan Kowalski");
 $salesman2 = new Salesman(2, "Jakis facet");
@@ -23,16 +24,7 @@ new Activity(3, "Nawiązanie kontaktu", new DateTime("2018-03-01 14:00"), $compa
 
 //echo $activity->getInfo();
 
-echo '<table border=1><tr><td>Data</td><td>Temat</td><td>Nazwa Firmy</td><td>Typ</td><td>Status</td><td>Sprzedawca</td></tr>';
-foreach ($activities as $activity) {
-echo "<p>{$activity->asHtmlTableRow()}</p>";  
+$myActivity = $activities[0];
 
-}
-
-echo '</table>';
-
-
-
-
-
-
+$activityGenerator = new ActivityGenerator();
+$activityGenerator->generate($activities);

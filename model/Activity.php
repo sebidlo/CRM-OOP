@@ -13,7 +13,8 @@ class Activity {
     var $salesman;
     var $company;
     var $type;
-    var $status;
+    private $status;
+    //var $status;
     var $note;
     
     function __construct($id, $subject, $time, $company, $salesman, $type, $status, $note) {
@@ -51,6 +52,30 @@ class Activity {
     
 }
 
+function getStatus(){
+    if ($this->status == 1){
+        return ActivityStatus::OPEN;
+    }
+    if ($this->status == 2){
+        return ActivityStatus::IN_PROGRES;
+    }
+    if ($this->status == 3){
+        return ActivityStatus::CLOSED;
+    }
+}
+
+function setStatus($newStatus){
+    if ($newStatus == ActivityStatus::OPEN){
+        $this->status = 1;
+    }
+    if ($newStatus == ActivityStatus::IN_PROGRES){
+        $this->status = 2;
+    }
+    if ($newStatus == ActivityStatus::CLOSED){
+        $this->status = 3;
+    }
+}
+
 class ActivityType {
     const PHONE = "telefon";
     const METTONG = "spotkanie";
@@ -59,8 +84,8 @@ class ActivityType {
 }
 
 class ActivityStatus {
-    const OPEN = "aplanowane";
-    const IN_PROGRES = "w trakcie";
-    const CLOSED = "zakończone";
+    const OPEN = "aplanowane";//1
+    const IN_PROGRES = "w trakcie";//2
+    const CLOSED = "zakończone";//3
     
 }
